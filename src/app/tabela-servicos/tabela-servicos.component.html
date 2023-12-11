@@ -1,1 +1,21 @@
-<p>tabela-servicos works!</p>
+<h3>Tabela de Serviços</h3>
+<label for="nome">Pesquisa: </label>
+    <input [(ngModel)]="nomePesquisado" id="nome"> 
+<br />
+<table *ngIf="listaServicos.length > 0">
+    <tr>
+        <th>ID</th>
+        <th>NOME</th>
+        <th>PRECO</th>
+        <th>AÇÃO</th>
+    </tr>
+    <tr *ngFor="let servico of listaServicos | filtroPesquisa:nomePesquisado">
+        <td>{{servico.id}}</td>
+        <td>{{servico.nome}}</td>
+        <!-- <td>{{servico.preco | currency:'BRL'}}</td> -->
+        <td>{{servico.preco | moeda}}</td>
+        <td><a routerLink='/edit/{{servico.id}}'>Editar</a></td>
+        <td><a routerLink='/tabela' (click)="deletar(servico.id)">Deletar</a></td>
+    </tr>
+</table>
+<p *ngIf="listaServicos.length <=0">NÃO HÁ SERVIÇOS CADASTRADOS!</p>

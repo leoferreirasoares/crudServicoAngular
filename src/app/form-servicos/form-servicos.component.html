@@ -1,1 +1,15 @@
-<p>form-servicos works!</p>
+<h3>Formulário de Serviços</h3>
+
+<div>
+    <label for="nome">NOME: </label>
+    <input [(ngModel)]="servico.nome" id="nome"> 
+    <br />
+
+    <label for="preco">PREÇO: </label>
+    <input  type=number [(ngModel)]="servico.preco" id="preco"> 
+    <br />    
+
+    <button (click)="salvar()">{{botaoAcao}}</button>
+    <button (click)="voltar()">Voltar</button>
+</div>
+<br />
