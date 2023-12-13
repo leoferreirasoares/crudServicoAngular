@@ -1,14 +1,9 @@
 {
   "servicos": [
     {
-      "id": 1,
-      "nome": "Corte",
-      "preco": 25
-    },
-    {
       "id": 2,
       "nome": "Corte Maquina",
-      "preco": 20
+      "preco": 25
     },
     {
       "id": 3,
@@ -21,14 +16,16 @@
       "preco": 40
     },
     {
-      "nome": "corte + sombrnaselha",
+      "nome": "corte + sobrancelha",
       "preco": 35,
       "id": 5
     },
     {
-      "nome": "test",
-      "preco": 40,
-      "id": 6
+      "preco": null,
+      "id": 7
+    },
+    {
+      "id": 9
     }
   ]
 }

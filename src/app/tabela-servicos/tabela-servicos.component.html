@@ -12,10 +12,9 @@
     <tr *ngFor="let servico of listaServicos | filtroPesquisa:nomePesquisado">
         <td>{{servico.id}}</td>
         <td>{{servico.nome}}</td>
-        <!-- <td>{{servico.preco | currency:'BRL'}}</td> -->
         <td>{{servico.preco | moeda}}</td>
-        <td><a routerLink='/edit/{{servico.id}}'>Editar</a></td>
-        <td><a routerLink='/tabela' (click)="deletar(servico.id)">Deletar</a></td>
+        <td><a routerLink='/edit/{{servico.id}}'>Editar</a>
+        <a routerLink='/tabela' (click)="deletar(servico.id)">Deletar</a></td>
     </tr>
 </table>
 <p *ngIf="listaServicos.length <=0">NÃO HÁ SERVIÇOS CADASTRADOS!</p>
